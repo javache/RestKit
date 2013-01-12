@@ -58,7 +58,7 @@ Pod::Spec.new do |s|
     end
 
     os.subspec 'XML' do |xos|
-      xos.source_files = 'Code/Support/Parsers/XML/RKXMLParserXMLReader.{h,m} Vendor/XMLReader/XMLReader.{h,m}'
+      xos.source_files = 'Code/Support/Parsers/XML/RKXMLParserXMLReader.{h,m}', 'Vendor/XMLReader/XMLReader.{h,m}'
       xos.libraries    = 'xml2'
       # xos.dependency     'XMLReader'
     end
