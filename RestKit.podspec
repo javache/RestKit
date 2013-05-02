@@ -15,6 +15,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'JSON' do |js|
     js.dependency 'RestKit/Network'
+    js.dependency 'RestKit/ObjectMapping/Core'
     js.dependency 'RestKit/ObjectMapping/JSON'
     js.dependency 'RestKit/ObjectMapping/CoreData'
     js.dependency 'RestKit/UI'
@@ -22,6 +23,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'XML' do |xs|
     xs.dependency 'RestKit/Network'
+    js.dependency 'RestKit/ObjectMapping/Core'
     xs.dependency 'RestKit/ObjectMapping/XML'
     xs.dependency 'RestKit/ObjectMapping/CoreData'
     xs.dependency 'RestKit/UI'
@@ -52,6 +54,10 @@ Pod::Spec.new do |s|
     os.dependency     'ISO8601DateFormatter', '>= 0.6'
     os.dependency     'RestKit/Network'
 
+    os.subspec 'Core' do |cos|
+      cos.source_files = 'Code/ObjectMapping/'
+    end
+
     os.subspec 'JSON' do |jos|
       jos.source_files = 'Code/Support/Parsers/JSON/RKJSONParserJSONKit.{h,m}'
       jos.dependency     'JSONKit', '>= 1.5pre'
@@ -60,7 +66,7 @@ Pod::Spec.new do |s|
     os.subspec 'XML' do |xos|
       xos.source_files = 'Code/Support/Parsers/XML/RKXMLParserXMLReader.{h,m}', 'Vendor/XMLReader/XMLReader.{h,m}'
       xos.libraries    = 'xml2'
-      # xos.dependency     'XMLReader'
+      # xos.dependency   'XMLReader'
     end
 
     os.subspec 'CoreData' do |cdos|
