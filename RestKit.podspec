@@ -13,7 +13,12 @@ Pod::Spec.new do |s|
 
   s.preferred_dependency = 'JSON'
 
+  s.subspec 'Core' do |cos|
+    cos.source_files = 'Code/RestKit.h'
+  end
+
   s.subspec 'JSON' do |js|
+    js.dependency 'RestKit/Core'
     js.dependency 'RestKit/Network'
     js.dependency 'RestKit/ObjectMapping/Core'
     js.dependency 'RestKit/ObjectMapping/JSON'
@@ -22,6 +27,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'XML' do |xs|
+    xs.dependency 'RestKit/Core'
     xs.dependency 'RestKit/Network'
     xs.dependency 'RestKit/ObjectMapping/Core'
     xs.dependency 'RestKit/ObjectMapping/XML'
