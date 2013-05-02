@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'XML' do |xs|
     xs.dependency 'RestKit/Network'
-    js.dependency 'RestKit/ObjectMapping/Core'
+    xs.dependency 'RestKit/ObjectMapping/Core'
     xs.dependency 'RestKit/ObjectMapping/XML'
     xs.dependency 'RestKit/ObjectMapping/CoreData'
     xs.dependency 'RestKit/UI'
