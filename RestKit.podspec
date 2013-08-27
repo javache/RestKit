@@ -8,6 +8,7 @@ Pod::Spec.new do |s|
   s.license      =  'Apache License, Version 2.0'
 
   s.source_files =  'Code/RestKit.h'
+  s.prefix_header_file = 'Code/RestKit_Prefix.pch'
 
   ### Preferred dependencies
 
